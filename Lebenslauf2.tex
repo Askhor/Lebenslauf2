@@ -1,0 +1,101 @@
+% !TeX spellcheck = de_DE
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[headheight=5em]{geometry}
+%\usepackage{lmodern}
+\usepackage[german]{babel}
+\usepackage{fancyhdr}
+\usepackage{microtype}
+%\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage[pdftex]{hyperref}
+
+
+\newcommand{\titlevar}{Lebenslauf Günthner}
+\newcommand{\authorvar}{Jonathan Günthner}
+\newcommand{\datevar}{2.2.2025}
+\newcommand{\address}{Enterbruck 13\\ 82296 Schöngeising}
+\newcommand{\telephone}{+49 162 760 420 3}
+\newcommand{\email}{\href{mailto:jonathan.guenthner@uni-a.de}{jonathan.guenthner@uni-a.de}}
+\newcommand{\website}{\href{https://guenthner.xyz}{guenthner.xyz}}
+
+\title{\titlevar}
+\author{\authorvar}
+\date{\datevar}
+\hypersetup{
+	pdftitle=\titlevar,
+	pdfauthor=\authorvar,
+	pdfcreationdate=\datevar,
+}
+\setlength{\parindent}{0pt}
+
+\newcommand{\sep}{\vspace{2em}\rule{\linewidth}{1pt}}
+
+\begin{document}
+	\renewcommand{\headrulewidth}{0pt}
+	\pagestyle{fancy}
+	\fancyhead[L]{
+		\begin{minipage}{15em}
+			\sffamily
+			\authorvar \\
+			\address \\
+		\end{minipage}
+	}
+	\fancyhead[R]{
+		\begin{minipage}{15em}
+			\begin{flushright}
+				\sffamily
+				\telephone \\
+				\email \\
+				\website \\
+			\end{flushright}
+		\end{minipage}
+	}
+	\fancyfoot{}
+	\fancyfoot[R]{\sffamily {\datevar} Augsburg}
+	
+	\sffamily
+	
+	\begin{center}
+		\Large \textbf{\titlevar}
+	\end{center}
+	
+	\def\arraystretch{1.5}
+	
+	\section*{\sffamily Profil}
+	
+	\begin{minipage}[t]{6cm}
+		Geboren am 22.6.2005 in Mammendorf bei Fürstenfeldbruck, studiere ich jetzt im Bachelor Mathematik und Informatik.
+	\end{minipage}
+	\hfill
+	\smash{
+	\raisebox{1cm}{
+	\raisebox{-4cm}{
+		\includegraphics[height=4cm]{TestImage}}}}
+	
+	\rule{0pt}{10ex}
+	
+	\sep
+	
+	\section*{\sffamily Bildungsweg}
+	\begin{tabular}{ll}
+		04/24 & Bachelor Mathematik \\
+		09/10 - 06/23 & Gymnasium (absolviert mit $1.9$) \\
+	\end{tabular}
+	
+	\sep
+	
+	\section*{\sffamily Sprachen}
+	\begin{tabular}{ll}
+		Deutsch & Muttersprache \\
+		English & Flüssig \\
+	\end{tabular}
+	
+	\sep
+	
+	\section*{\sffamily Weitere Kenntnisse}
+	`\begin{tabular}{l}
+		Latex
+	\end{tabular}
+\end{document}
